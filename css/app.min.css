@@ -1583,6 +1583,315 @@ svg {
   }
 }
 
+.profession__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 65px 65px;
+  background: #F1F8FF;
+  border-radius: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .profession__wrapper {
+    padding: 40px 45px 45px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .profession__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profession__wrapper {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+}
+.profession__left {
+  max-width: calc(100% - 390px - 40px);
+  width: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .profession__left {
+    max-width: none;
+  }
+}
+.profession__right {
+  margin-left: 40px;
+  max-width: 390px;
+  min-width: 390px;
+  width: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .profession__right {
+    margin-top: 24px;
+    margin-left: 0;
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profession__right {
+    max-width: none;
+  }
+}
+.profession__heading {
+  display: block;
+  margin-bottom: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.42858;
+}
+@media screen and (max-width: 767px) {
+  .profession__heading {
+    margin-bottom: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+  }
+}
+.profession__tabs {
+  max-width: 560px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .profession__tabs {
+    max-width: none;
+  }
+}
+.profession__slider {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+@media screen and (max-width: 767px) {
+  .profession__slider {
+    border-radius: 10px;
+  }
+}
+.profession__slider .swiper-controls {
+  position: absolute;
+  right: 30px;
+  bottom: 18px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.profession__slider .swiper-button-prev,
+.profession__slider .swiper-button-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  background: #F1F8FF;
+  border: none;
+  border-radius: 50%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.profession__slider .swiper-button-prev:focus,
+.profession__slider .swiper-button-next:focus {
+  outline: none;
+}
+.profession__slider .swiper-button-next {
+  margin-left: 10px;
+}
+.profession__slider .swiper-button-icon {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  color: #1280FF;
+}
+
+.profession-tabs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .profession-tabs__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 0 -20px -30px;
+    padding: 0 20px 30px;
+    width: calc(100% + 40px);
+    -webkit-clip-path: inset(0 0 30px 0);
+            clip-path: inset(0 0 30px 0);
+  }
+}
+.profession-tabs__item.is--active .profession-tabs__tab {
+  border-color: #1280FF;
+}
+@media screen and (min-width: 768px) {
+  .profession-tabs__item {
+    width: calc(33.333333333% - 6.6666666667px);
+  }
+  .profession-tabs__item:nth-child(3n), .profession-tabs__item:nth-child(3n-1) {
+    margin-left: 10px;
+  }
+  .profession-tabs__item:nth-child(n+4) {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profession-tabs__item:nth-child(n+2) {
+    margin-left: 5px;
+  }
+}
+.profession-tabs__tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 18px 20px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.profession-tabs__tab > img {
+  display: block;
+  width: auto;
+  height: 34px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.profession-tabs__tab:focus {
+  outline: none;
+}
+@media screen and (hover: hover) {
+  .profession-tabs__tab:hover {
+    border-color: #1280FF;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profession-tabs__tab {
+    padding: 9px 0;
+    min-width: 116px;
+    width: 116px;
+  }
+  .profession-tabs__tab > img {
+    height: 24px;
+  }
+}
+.profession-tabs__wrapper {
+  display: none;
+}
+.profession-tabs__wrapper.is--active {
+  display: block;
+}
+
+.profession-card {
+  display: block;
+  overflow: hidden;
+  padding: 30px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+@media screen and (max-width: 767px) {
+  .profession-card {
+    padding: 30px 30px 64px;
+  }
+}
+.profession-card__img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+.profession-card__img::before {
+  content: "";
+  display: block;
+  padding-top: 60.5%;
+}
+.profession-card__img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profession-card__img + .profession-card__body {
+  margin-top: 23px;
+}
+@media screen and (max-width: 767px) {
+  .profession-card__img + .profession-card__body {
+    margin-top: 16px;
+  }
+}
+.profession-card__title {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.profession-card__date {
+  display: block;
+  margin-top: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.333333333;
+}
+@media screen and (max-width: 767px) {
+  .profession-card__date {
+    margin-top: 6px;
+  }
+}
+
 .statistics__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1638,6 +1947,11 @@ svg {
     bottom: 0;
     left: 0;
     z-index: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .statistics__img {
+    border-radius: 20px;
   }
 }
 .statistics__img + .statistics__body {
