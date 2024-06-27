@@ -1786,9 +1786,7 @@ svg {
   }
 }
 .main__btn {
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
+  min-width: 270px;
 }
 @media screen and (max-width: 767px) {
   .main__btn {
@@ -4340,7 +4338,7 @@ svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 46px 13px 0 40px;
+  padding: 46px 13px 46px 40px;
   background: #F1F8FF;
   border: 1px solid #F1F8FF;
   border-radius: 40px;
@@ -4358,7 +4356,7 @@ svg {
 }
 .subscribe-channels-card__img {
   position: absolute;
-  top: 58px;
+  top: 88px;
   left: 52px;
   z-index: 1;
   display: block;
@@ -4404,13 +4402,17 @@ svg {
   }
 }
 .subscribe-channels-card__body {
-  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
-}
-@media screen and (max-width: 1299px) {
-  .subscribe-channels-card__body {
-    padding-bottom: 0;
-  }
 }
 .subscribe-channels-card__title {
   display: block;
@@ -4838,6 +4840,7 @@ svg {
 @media screen and (max-width: 767px) {
   .lectors-card {
     padding: 30px 20px;
+    min-height: auto;
     border-radius: 20px;
   }
 }
@@ -5612,10 +5615,12 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 38px;
+  padding-bottom: 28px;
 }
 @media screen and (max-width: 1023px) {
   .application__left {
     padding-top: 0;
+    padding-bottom: 0;
     width: 100%;
   }
   .application__left--center {
