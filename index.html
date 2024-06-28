@@ -514,7 +514,9 @@
 							<div class="statistics-details statistics__details">
 								<div class="statistics-details__wrapper">
 									<div class="statistics-details__item">
-										<span class="statistics-details__value">3 000 000</span>
+										<span class="statistics-details__value" id="statistics-number">
+											<div class="number">3 000 000</div>
+										</span>
 										<span class="statistics-details__help">Детей рождается в русскоязычных странах ежегодно</span>
 									</div>
 									<div class="statistics-details__item">
@@ -566,7 +568,7 @@
 								<span class="webinar__subtitle">Дата следующего вебинара — 15 июня в 18:00</span>
 							</div>
 							<div class="webinar__inner">
-								<a href="#" class="webinar__btn btn btn--white">Записаться</a>
+								<a href="#" class="webinar__btn btn btn--white" id="webinar-trigger">Записаться</a>
 								<span class="webinar__bonus">
 									<svg>
 										<use xlink:href="img/sprite.svg#icon-gift"></use>
@@ -574,6 +576,66 @@
 									<span>Запишитесь сейчас и получите в подарок подкаст «Как успевать учиться с 3 детьми»</span>
 								</span>
 							</div>
+						</div>
+						<div class="webinar__popup">
+							<form action="#" class="webinar__form webinar-form">
+								<div class="webinar-form__inner">
+									<div class="input-field webinar-form__input">
+										<div class="input-field__inner">
+											<input type="text" class="input-field__input" placeholder="Имя">
+										</div>
+									</div>
+									<div class="input-field webinar-form__input">
+										<div class="input-field__inner">
+											<input type="email" class="input-field__input" placeholder="E-mail">
+										</div>
+									</div>
+								</div>
+								<div class="webinar-form__inner">
+									<div class="input-field webinar-form__input">
+										<div class="input-field__inner">
+											<input type="tel" class="input-field__input" placeholder="Контактный телефон">
+										</div>
+									</div>
+								</div>
+								<div class="webinar-form__inner">
+									<div class="input-field webinar-form__input">
+										<div class="input-field__inner">
+											<input type="text" class="input-field__input" placeholder="Текстовое поле">
+										</div>
+									</div>
+								</div>
+								<div class="switch-checkbox webinar-form__switch">
+									<div class="switch-checkbox__wrapper">
+										<div class="switch-checkbox__item">
+											<input type="radio" class="switch-checkbox__input" id="webinar-view-01" name="webinar-switch" checked>
+											<label for="webinar-view-01" class="switch-checkbox__group">
+												<span class="switch-checkbox__title">Смотреть сейчас</span>
+											</label>
+										</div>
+										<div class="switch-checkbox__item">
+											<input type="radio" class="switch-checkbox__input" id="webinar-view-02" name="webinar-switch">
+											<label for="webinar-view-02" class="switch-checkbox__group">
+												<span class="switch-checkbox__title">Смотреть завтра</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="webinar-form__buttons">
+									<button class="webinar-form__btn btn">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-vk"></use>
+										</svg>
+										<span>Получить подарок в ВК</span>
+									</button>
+									<button class="webinar-form__btn btn">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-tg"></use>
+										</svg>
+										<span>Получить подарок в Telegram</span>
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -723,9 +785,9 @@
 								</div>
 								<div class="programs-payment-tabs__wrapper is--active">
 									<div class="programs-payment__wrapper">
-										<div class="programs-payment-card programs-payment__item">
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1 модуль</h3>
+												<span class="programs-payment-card__title">1 модуль</span>
 											</div>
 											<div class="programs-payment-card__block">
 												<div class="programs-payment-card__inner">
@@ -733,13 +795,13 @@
 														<span class="programs-payment-card__price">3 200 ₽/мес</span>
 														<span class="programs-payment-card__help">При оплате на 12 месяцев</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
-										<div class="programs-payment-card programs-payment__item">
+										</a>
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1+2 модули</h3>
+												<span class="programs-payment-card__title">1+2 модули</span>
 											</div>
 											<div class="programs-payment-card__block">
 												<div class="programs-payment-card__inner">
@@ -747,13 +809,13 @@
 														<span class="programs-payment-card__price">5 100 ₽/мес</span>
 														<span class="programs-payment-card__help">При оплате на 12 месяцев</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
-										<div class="programs-payment-card programs-payment__item">
+										</a>
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1+2+3 модули</h3>
+												<span class="programs-payment-card__title">1+2+3 модули</span>
 												<div class="programs-payment-card__statuses">
 													<span class="programs-payment-card__status">+2 месяца практики</span>
 												</div>
@@ -764,13 +826,13 @@
 														<span class="programs-payment-card__price">5 900 ₽/мес</span>
 														<span class="programs-payment-card__help">При оплате на 12 месяцев</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
-										<div class="programs-payment-card programs-payment__item">
+										</a>
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1+2+3 модули</h3>
+												<span class="programs-payment-card__title">1+2+3 модули</span>
 												<div class="programs-payment-card__statuses">
 													<span class="programs-payment-card__status">+2 месяца практики</span>
 													<span class="programs-payment-card__status programs-payment-card__status--purple">+1 год сопровождения</span>
@@ -782,43 +844,43 @@
 														<span class="programs-payment-card__price">6 300 ₽/мес</span>
 														<span class="programs-payment-card__help">При оплате на 12 месяцев</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="programs-payment-tabs__wrapper">
 									<div class="programs-payment__wrapper">
-										<div class="programs-payment-card programs-payment__item">
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1 модуль</h3>
+												<span class="programs-payment-card__title">1 модуль</span>
 											</div>
 											<div class="programs-payment-card__block">
 												<div class="programs-payment-card__inner">
 													<div class="programs-payment-card__group">
 														<span class="programs-payment-card__price">73 000 ₽</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
-										<div class="programs-payment-card programs-payment__item">
+										</a>
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1+2 модули</h3>
+												<span class="programs-payment-card__title">1+2 модули</span>
 											</div>
 											<div class="programs-payment-card__block">
 												<div class="programs-payment-card__inner">
 													<div class="programs-payment-card__group">
 														<span class="programs-payment-card__price">123 000 ₽</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
-										<div class="programs-payment-card programs-payment__item">
+										</a>
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1+2+3 модули</h3>
+												<span class="programs-payment-card__title">1+2+3 модули</span>
 												<div class="programs-payment-card__statuses">
 													<span class="programs-payment-card__status">+2 месяца практики</span>
 												</div>
@@ -832,13 +894,13 @@
 													<div class="programs-payment-card__group">
 														<span class="programs-payment-card__price">175 000 ₽</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
-										<div class="programs-payment-card programs-payment__item">
+										</a>
+										<a href="#" class="programs-payment-card programs-payment__item">
 											<div class="programs-payment-card__block">
-												<h3 class="programs-payment-card__title">1+2+3 модули</h3>
+												<span class="programs-payment-card__title">1+2+3 модули</span>
 												<div class="programs-payment-card__statuses">
 													<span class="programs-payment-card__status">+2 месяца практики</span>
 													<span class="programs-payment-card__status programs-payment-card__status--purple">+1 год сопровождения</span>
@@ -853,10 +915,10 @@
 													<div class="programs-payment-card__group">
 														<span class="programs-payment-card__price">210 000 ₽</span>
 													</div>
-													<a href="#" class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</a>
+													<span class="programs-payment-card__btn btn btn--light-blue">Отправить заявку</span>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="programs-payment__bottom">
