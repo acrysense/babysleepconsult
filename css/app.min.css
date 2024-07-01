@@ -92,7 +92,7 @@ svg {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.4;
   text-align: center;
   color: #FFFFFF;
@@ -782,6 +782,8 @@ svg {
   width: 100%;
   background: #FFFFFF;
   border-radius: 20px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .c-voice__inner {
   display: -webkit-box;
@@ -825,6 +827,9 @@ svg {
 .c-voice__play:focus {
   outline: none;
 }
+.c-voice__play .white {
+  opacity: 0;
+}
 @media screen and (hover: hover) {
   .c-voice__play:hover > svg {
     color: #005AC2;
@@ -842,6 +847,8 @@ svg {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #1280FF;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .c-voice__track {
   display: -webkit-box;
@@ -861,6 +868,8 @@ svg {
   font-weight: 600;
   line-height: 1.3;
   color: #1280FF;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .c-voice__progress {
   position: relative;
@@ -880,6 +889,8 @@ svg {
   width: 100%;
   height: 1px;
   background: rgba(18, 128, 255, 0.1);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .c-voice__progress-dot {
   position: absolute;
@@ -894,6 +905,8 @@ svg {
   height: 4px;
   background: #1280FF;
   border-radius: 50%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .c-document__wrapper {
@@ -912,8 +925,32 @@ svg {
   border-radius: 20px;
   -webkit-box-shadow: -73px 40px 23px 0px rgba(25, 74, 176, 0), -46px 26px 21px 0px rgba(25, 74, 176, 0.01), -26px 14px 18px 0px rgba(25, 74, 176, 0.04), -12px 6px 13px 0px rgba(25, 74, 176, 0.06), -3px 2px 7px 0px rgba(25, 74, 176, 0.07);
           box-shadow: -73px 40px 23px 0px rgba(25, 74, 176, 0), -46px 26px 21px 0px rgba(25, 74, 176, 0.01), -26px 14px 18px 0px rgba(25, 74, 176, 0.04), -12px 6px 13px 0px rgba(25, 74, 176, 0.06), -3px 2px 7px 0px rgba(25, 74, 176, 0.07);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+@media screen and (hover: hover) {
+  .c-document__wrapper:hover {
+    background: #1280FF;
+  }
+  .c-document__wrapper:hover .c-document__icon .default {
+    opacity: 0;
+  }
+  .c-document__wrapper:hover .c-document__icon .white {
+    opacity: 1;
+  }
+  .c-document__wrapper:hover .c-document__name {
+    color: #FFFFFF;
+  }
+  .c-document__wrapper:hover .c-document__link {
+    color: #FFFFFF;
+  }
+  .c-document__wrapper:hover .c-document__link:hover {
+    color: #FFFFFF;
+  }
 }
 .c-document__icon {
+  position: relative;
+  z-index: 1;
   display: block;
   overflow: hidden;
   margin-right: 10px;
@@ -922,11 +959,23 @@ svg {
   height: 34px;
 }
 .c-document__icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.c-document__icon .white {
+  opacity: 0;
 }
 .c-document__icon + .c-document__body {
   max-width: calc(100% - 34px - 10px);
@@ -947,6 +996,8 @@ svg {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #1280FF;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .c-document__link {
   display: block;
@@ -959,6 +1010,8 @@ svg {
   line-height: 1.45455;
   text-decoration: underline;
   color: #1280FF;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .c-document__link:hover {
   color: #1280FF;
@@ -1023,6 +1076,9 @@ svg {
   padding: 12px 40px;
   color: #FFFFFF;
   background: #1280FF;
+}
+.top-banner.is--hidden {
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .top-banner {
@@ -1461,10 +1517,15 @@ svg {
   margin-top: 60px;
   padding: 73px 0 82px;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    padding: 73px 0 94px;
+  }
+}
 @media screen and (max-width: 767px) {
   .footer {
     margin-top: 40px;
-    padding: 7px 0 16px;
+    padding: 7px 0 94px;
   }
 }
 .footer__wrapper {
@@ -1586,7 +1647,13 @@ svg {
   }
 }
 .footer__btn {
-  margin: 39px auto 0;
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 100;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   min-width: 207px;
 }
 @media screen and (min-width: 1024px) {
@@ -2000,6 +2067,30 @@ svg {
   background: #F1F8FF;
   -webkit-box-shadow: -73px 40px 23px 0px rgba(25, 74, 176, 0), -46px 26px 21px 0px rgba(25, 74, 176, 0.01), -26px 14px 18px 0px rgba(25, 74, 176, 0.04), -12px 6px 13px 0px rgba(25, 74, 176, 0.06), -3px 2px 7px 0px rgba(25, 74, 176, 0.07);
           box-shadow: -73px 40px 23px 0px rgba(25, 74, 176, 0), -46px 26px 21px 0px rgba(25, 74, 176, 0.01), -26px 14px 18px 0px rgba(25, 74, 176, 0.04), -12px 6px 13px 0px rgba(25, 74, 176, 0.06), -3px 2px 7px 0px rgba(25, 74, 176, 0.07);
+}
+@media screen and (hover: hover) {
+  .main__voice .c-voice__wrapper:hover {
+    color: #FFFFFF;
+    background: #1280FF;
+  }
+  .main__voice .c-voice__wrapper:hover .c-voice__play .default {
+    opacity: 0;
+  }
+  .main__voice .c-voice__wrapper:hover .c-voice__play .white {
+    opacity: 1;
+  }
+  .main__voice .c-voice__wrapper:hover .c-voice__name {
+    color: #FFFFFF;
+  }
+  .main__voice .c-voice__wrapper:hover .c-voice__time {
+    color: #FFFFFF;
+  }
+  .main__voice .c-voice__wrapper:hover .c-voice__progress::before {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .main__voice .c-voice__wrapper:hover .c-voice__progress-dot {
+    background: #FFFFFF;
+  }
 }
 .main__voice .c-voice__name {
   display: -webkit-box;
@@ -2647,6 +2738,14 @@ svg {
   background: #1280FF;
   border-radius: 40px;
 }
+.webinar__wrapper.is--active {
+  background: transparent;
+}
+.webinar__wrapper.is--active .webinar__popup {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
   .webinar__wrapper {
     padding: 59px 40px;
@@ -2809,6 +2908,9 @@ svg {
 }
 @media screen and (max-width: 1023px) {
   .webinar__body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     max-width: none;
   }
 }
@@ -2938,11 +3040,6 @@ svg {
   pointer-events: none;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
-}
-.webinar__popup.is--active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
   .webinar__popup {
@@ -3645,6 +3742,8 @@ svg {
 }
 
 .programs-payment-card {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3687,6 +3786,28 @@ svg {
 @media screen and (max-width: 767px) {
   .programs-payment-card {
     padding: 20px;
+  }
+  .programs-payment-card--recommended {
+    border: 2px solid #1280FF;
+  }
+  .programs-payment-card--recommended::before {
+    content: "Рекомендовано";
+    position: absolute;
+    top: -8px;
+    left: 13px;
+    z-index: 1;
+    display: block;
+    padding: 6px 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    color: #FFFFFF;
+    background: #1280FF;
+    border-radius: 20px;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -4195,7 +4316,7 @@ svg {
   height: 100%;
   background-image: url(../img/after-training-bg-01.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
 }
 .after-training-card--orange {
