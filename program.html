@@ -910,11 +910,15 @@
 			<!-- application -->
 			<section class="application section-indent" id="application">
 				<div class="container">
-					<div class="application__wrapper">
-						<div class="application__left application__left--no-indent">
+					<div class="application__wrapper application__wrapper--default">
+						<div class="application__left">
 							<div class="application__block">
 								<h2 class="application__heading">Старт обучения — 9 марта</h2>
 								<p class="application__help">Забронируй место и получи 3 бонуса на ознакомительном уроке в подарок!</p>
+								<picture class="application__img">
+									<source srcset="img/application-learning-start.png" media="(min-width: 768px)">
+									<img src="img/application-learning-start-mobile.png" width="316" height="195" alt="Image">
+								</picture>
 							</div>
 						</div>
 						<div class="application__right">
@@ -934,7 +938,6 @@
 										<input type="tel" class="input-field__input" placeholder="Контактный телефон">
 									</div>
 								</div>
-								<button class="application-form__btn btn">Забронировать место</button>
 								<div class="square-checkbox application-form__checkbox">
 									<input type="checkbox" class="square-checkbox__input" id="application-policy-privacy">
 									<label for="application-policy-privacy" class="square-checkbox__group">
@@ -942,6 +945,48 @@
 										<span class="square-checkbox__title">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных в соответствии с условиями <a href="#">Политики конфиденциальности</a></span>
 									</label>
 								</div>
+								<button class="application-form__btn btn">Забронировать место</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of application -->
+			<!-- application -->
+			<section class="application section-indent" id="application-2">
+				<div class="container">
+					<div class="application__wrapper application__wrapper--light-blue application__wrapper--default">
+						<div class="application__left">
+							<div class="application__block">
+								<h2 class="application__heading">Интересно, но не готовы начать в текущем потоке?</h2>
+								<p class="application__help">Сообщим вам о старте следующего потока</p>
+							</div>
+						</div>
+						<div class="application__right">
+							<form action="" class="application-form application__form">
+								<div class="input-field application-form__input">
+									<div class="input-field__inner">
+										<input type="text" class="input-field__input" placeholder="Имя">
+									</div>
+								</div>
+								<div class="input-field application-form__input">
+									<div class="input-field__inner">
+										<input type="email" class="input-field__input" placeholder="E-mail">
+									</div>
+								</div>
+								<div class="input-field application-form__input">
+									<div class="input-field__inner">
+										<input type="tel" class="input-field__input" placeholder="Контактный телефон">
+									</div>
+								</div>
+								<div class="square-checkbox application-form__checkbox">
+									<input type="checkbox" class="square-checkbox__input" id="application-policy-privacy">
+									<label for="application-policy-privacy" class="square-checkbox__group">
+										<span class="square-checkbox__icon"></span>
+										<span class="square-checkbox__title">Нажимая кнопку, вы подтверждаете согласие на обработку персональных данных в соответствии с условиями <a href="#">Политики конфиденциальности</a></span>
+									</label>
+								</div>
+								<button class="application-form__btn btn">Получать уведомления о следующих потоках</button>
 							</form>
 						</div>
 					</div>
